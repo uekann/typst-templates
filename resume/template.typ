@@ -8,7 +8,7 @@
   )
 }
 
-#let personal_info(first_name_kana: "", last_name_kana: "", first_name: "", last_name: "", birth_date: "", age: 0) = {
+#let personal_info(first_name_kana: "", last_name_kana: "", first_name: "", last_name: "", birth_date: "", age: 0, gender: "") = {
   stack(
     place(
       top + right,
@@ -107,7 +107,7 @@
             [性別],
               pad(
                 y: 0.2cm,
-                [#text(inputFontSize,[男])]
+                [#text(inputFontSize,[#gender])]
               )
             )
           )
@@ -498,6 +498,7 @@
   last_name: "太郎",
   birth_date: "1990年1月1日",
   age: 99,
+  gender: "",
   photo_path: "",
   address1_kana: "とうきょうとすみだくおしあげ",
   address1: "東京都墨田区押上１丁目１−２",
@@ -533,7 +534,8 @@
             first_name: first_name,
             last_name: last_name,
             birth_date: birth_date,
-            age: age
+            age: age,
+            gender: gender
           ),
           if photo_path == "" { photo() } else { photo(image_path: photo_path) }
         ),

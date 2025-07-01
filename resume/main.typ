@@ -10,6 +10,7 @@
   last_name: "太郎",
   birth_date: "1990年1月1日",
   age: 99,
+  gender: "男",
   // photo_path: "image/testImage.png", // 写真がある場合はコメントアウトを外す
   address1_kana: "とうきょうとすみだくおしあげ",
   address1: "東京都墨田区押上１丁目１−２",
